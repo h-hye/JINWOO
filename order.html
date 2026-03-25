@@ -48,6 +48,16 @@
             justify-content: space-between;
             align-items: center;
         }
+        .menu-info {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+.menu-price {
+    color: #6c757d;
+    font-size: 14px;
+}
 
         .menu-name {
             font-size: 16px;
@@ -75,6 +85,18 @@
             font-weight: 700;
             text-align: right;
         }
+
+        .order-main-btn {
+            width: 100%;
+            background-color: #4c6fff;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 
@@ -103,7 +125,10 @@
     <div class="menu-list">
         <div class="card custom-card mb-2 menu-item" data-price="32000">
             <div class="card-body menu-row">
-                <span class="menu-name">닭발 편육 (1kg 32,000원)</span>
+                <div class="menu-info">
+                    <span class="menu-name">닭발 편육</span>
+                    <span class="menu-price">(1kg 32,000원)</span>
+                </div>
                 <div class="quantity-box">
                     <button onclick="changeQty(this, -1)">-</button>
                     <span class="qty">0</span>
@@ -114,7 +139,10 @@
 
         <div class="card custom-card mb-2 menu-item" data-price="35000">
             <div class="card-body menu-row">
-                <span class="menu-name">김부각 (100장 35,000원)</span>
+                <div class="menu-info">
+                    <span class="menu-name">김부각</span>
+                    <span class="menu-price">(100장 35,000원)</span>
+                </div>
                 <div class="quantity-box">
                     <button onclick="changeQty(this, -1)">-</button>
                     <span class="qty">0</span>
@@ -122,13 +150,33 @@
                 </div>
             </div>
         </div>
+        <div class="card custom-card mb-2">
+            <div class="card-body menu-row">
+                <div class="menu-info">
+                    <span class="menu-name">택배비</span>
+                    <span class="menu-price">(기본 포함 5,000원)</span>
+                </div>
+            </div>
+        </div>
     </div>
-
+    
     <div class="card-body total-box">
-        <span id="total-price">0</span>원
+        총 금액: <span id="total-price">0</span>원
     </div>
 
     <!-- 4. 날짜 선택 -->
+    <h4 class="section-title">배송 날짜 선택</h4>
+    <div class="card custom-card mb-5">
+        <div class="card-body">
+            <input type="date" class="form-control" id="delivery-date">
+        </div>
+    </div>
+
+    <!-- 주문 버튼 -->
+    <button class="order-main-btn" onclick="sendSMS()">주문하기</button>
+    <p class="text-muted small mt-2" style="text-align: center;">
+    주문하기 버튼을 누르면 문자 앱이 열립니다. 내용을 확인한 뒤 직접 전송해 주세요.
+    </p>
 
 </div>
 
