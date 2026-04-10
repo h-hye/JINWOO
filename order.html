@@ -96,15 +96,9 @@
             font-size: 18px;
             margin-top: 20px;
         }
-        .form-control {
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 14px;
-        }
-
         .form-label {
-            font-weight: 600;
-            color: #495057;
+            width: 80px;
+            margin-bottom: 0;
         }
 
     </style>
@@ -213,14 +207,20 @@
 <div class="card custom-card mb-5">
     <div class="card-body">
         
-        <div class="mb-3">
-            <label class="form-label">이름</label>
-            <input type="text" class="form-control" placeholder="이름을 입력해주세요" id="customer-name">
+        <div class="my-2" >
+            <div class="d-flex align-items-center gap-3">
+                <label class="form-label" style="flex-shrink: 0;">이름</label>
+                <input type="text" class="form-control" style="flex: 0 0 200px;" 
+                placeholder="이름을 입력해주세요" id="customer-name">
+            </div>
         </div>
 
-        <div class="mb-2">
-            <label class="form-label">전화번호</label>
-            <input type="text" class="form-control" placeholder="01012345678" id="customer-phone">
+        <div class="my-2">
+            <div class="d-flex align-items-center gap-3">
+                <label class="form-label" style="flex-shrink: 0;">전화번호</label>
+                <input type="text" class="form-control" style="flex: 0 0 200px;" 
+                placeholder="010-1234-5678" id="customer-phone">
+            </div>
         </div>
 
     </div>
@@ -231,7 +231,7 @@
     <div class="card custom-card mb-5">
         <div class="card-body">
 
-            <div class="mb-3">
+            <div class="my-3">
                 <div class="d-flex align-items-center gap-3">
                     <input type="text" class="form-control" style="flex: 0 0 150px;" 
                     id="postcode" placeholder="우편번호">
@@ -239,11 +239,11 @@
                 </div>
             </div>
 
-            <div class="mb-3">
+            <div class="my-3">
                 <input type="text" id="address" class="form-control" placeholder="도로명주소">
             </div>
 
-            <div>
+            <div class="my-3">
                 <input type="text" id="detail" class="form-control" placeholder="상세주소 입력">
             </div>
 
